@@ -29,7 +29,7 @@ $(function () {
   })
 
   // 监听注册表单的提交事件
-  var form = layui.layer;
+  var layer = layui.layer;
   $('#form-reg').on('submit', function (e) {
     e.preventDefault();
     var data = { username: $('#form-reg [name=username]').val(), password: $('#form-reg [name=password]').val() }
@@ -45,7 +45,6 @@ $(function () {
   })
 
   // 监听登录表单的提交事件
-  var form = layui.layer;
   $('#form-login').submit(function (e) {
     e.preventDefault();
     $.ajax({

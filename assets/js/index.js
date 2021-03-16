@@ -1,5 +1,5 @@
 $(function () {
-    getUserinfo()
+    getUserInfo()
 
     var layer = layui.layer
     // 退出
@@ -18,7 +18,7 @@ $(function () {
             });
     })
 })
-function getUserinfo() {
+function getUserInfo() {
     $.ajax({
         method: 'GET',
         url: '/my/userinfo',
@@ -51,8 +51,8 @@ function renderAvatar(user) {
     // 按需渲染用户的头像
     if (user.user_pic !== null) {
         // 渲染图片头像
-        $('.layui-nav-img')
-            .attr('src', user.user_pic).show()
+        $('.layui-nav-img').attr('src', user.user_pic).show()
+        $('.text-avatar').hide()
     } else {
         // 渲染文本头像
         $('.layui-nav-img').hide()
